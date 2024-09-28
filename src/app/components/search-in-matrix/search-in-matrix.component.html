@@ -1,0 +1,22 @@
+ <div class="container">
+      <h2 class="text-primary">Buscar en Matriz</h2>
+
+      <div class="mb-3">
+        <label>Buscar número en la matriz:</label>
+        <input class="form-control" type="number" [(ngModel)]="valorBuscado" />
+      </div>
+
+      <button class="btn btn-primary mb-3" (click)="buscarValor()">Buscar</button>
+
+      <div *ngIf="encontrado !== null" class="alert" [ngClass]="{'alert-success': encontrado, 'alert-danger': !encontrado}">
+        <ng-container *ngIf="encontrado">¡Número encontrado en la matriz!</ng-container>
+        <ng-container *ngIf="!encontrado">Número no encontrado en la matriz.</ng-container>
+      </div>
+
+      <h3>Matriz:</h3>
+      <table class="table table-bordered">
+        <tr *ngFor="let fila of matriz">
+          <td *ngFor="let valor of fila">{{ valor }}</td>
+        </tr>
+      </table>
+    </div>

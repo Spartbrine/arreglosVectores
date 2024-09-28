@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 class="text-primary">Promedios de Cursos</h2>
+
+  <div class="mb-3">
+    <h4>Ingrese las notas finales:</h4>
+    <div *ngFor="let curso of cursos; let i = index" class="mb-2">
+      <label>{{ curso.nombre }}:</label>
+      <div *ngFor="let alumno of curso.notas; let j = index">
+        <input type="number" [(ngModel)]="curso.notas[j]" class="form-control mb-1" placeholder="Nota del alumno {{ j + 1 }}" />
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-primary mb-3" (click)="calcularPromedios()">Calcular Promedios</button>
+
+  <h3>Cursos con Mayor Promedio:</h3>
+  <ul>
+    <li *ngFor="let curso of cursosConMayorPromedio">{{ curso.nombre }} (Promedio: {{ curso.promedio | number: '1.1-1' }})</li>
+  </ul>
+
+  <div *ngIf="cursosConMayorPromedio.length === 0">No hay cursos con promedios disponibles.</div>
+</div>

@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/arreglos-vectores/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

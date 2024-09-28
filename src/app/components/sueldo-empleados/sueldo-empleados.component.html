@@ -1,0 +1,9 @@
+<div class="container">
+  <h2 class="text-primary">Sueldos de empleados</h2>
+  <div *ngFor="let empleado of empleados" class="mb-3">
+    <label>{{ empleado.nombre }} (sueldos quincenales separados por comas):</label>
+    <input class="form-control" [(ngModel)]="empleado.inputSueldos" (ngModelChange)="actualizarEmpleado(empleado)" />
+  </div>
+  <p><strong>Total pagado en los últimos 5 meses:</strong> {{ totalPagado }}</p>
+  <p><strong>Empleado con mayor ingreso:</strong> {{ empleadoMayorIngreso }}</p>
+</div>

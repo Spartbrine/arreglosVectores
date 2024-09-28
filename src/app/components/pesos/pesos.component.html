@@ -1,0 +1,10 @@
+<div class="container">
+  <h2 class="text-primary">Promedio de Pesos</h2>
+  <div class="mb-3">
+    <label for="inputPesos">Ingresa los pesos separados por comas:</label>
+    <input id="inputPesos" class="form-control" [(ngModel)]="inputPesos" (ngModelChange)="actualizarPesos()" />
+  </div>
+  <p><strong>Peso promedio:</strong> {{ promedio }}</p>
+  <p><strong>Personas más pesadas que el promedio:</strong> {{ masAltos }}</p>
+  <p><strong>Personas más livianas que el promedio:</strong> {{ masBajos }}</p>
+</div>

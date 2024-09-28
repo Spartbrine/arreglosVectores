@@ -1,0 +1,9 @@
+<div class="container">
+  <h2 class="text-primary">Invertir Arreglo</h2>
+  <div class="mb-3">
+    <label for="inputArray">Ingresa los números separados por comas:</label>
+    <input id="inputArray" class="form-control" [(ngModel)]="inputArray" (ngModelChange)="updateArray()" />
+  </div>
+  <p><strong>Arreglo original:</strong> {{ originalArray }}</p>
+  <p><strong>Arreglo invertido:</strong> {{ reversedArray }}</p>
+</div>
